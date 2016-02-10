@@ -3,10 +3,22 @@
 class Places
 {
     private $cityname;
+    private $description;
 
-    function __construct($cityname)
+    function __construct($cityname, $description)
     {
         $this->cityname = $cityname;
+        $this->description = $description;
+    }
+
+    function setDescription($newDescription)
+    {
+        $this->description = (string) $newDescription;
+    }
+
+    function getDescription()
+    {
+        return $this->$description;
     }
 
     function setCityName($newCityName)
